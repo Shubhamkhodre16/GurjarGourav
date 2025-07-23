@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-     <Box display="flex" flexDirection="column" height="100vh">
+     <Box display="flex" flexDirection="column" height="200vh">
 
     <Router >
        <Navbar />
@@ -34,10 +34,7 @@ function App() {
         <Route path="patrakaar" element={<PatrakaarSamaroh/>} />
         <Route path="samman" element={<SammanSamaroh/>} />
         <Route path="contact" element={<Contact/>} />
-        
-
-
-
+    
        </Routes>
        <Footer />
     </Router>
