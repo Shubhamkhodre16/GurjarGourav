@@ -18,20 +18,23 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/image/gaurav navbar img.png";
+import LanguageSwitcher from "../Pages/LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 const navItems = [
-  { label: "Home", path: "/" },
-  { label: "About", path: "/about" },
-  { label: "Entries for Event", path: "/entries" },
-  { label: "Scholarship Form", path: "/scholarship" },
-  { label: "Patrakaar Samaroh", path: "/patrakaar" },
-  { label: "Samman Samaroh", path: "/samman" },
-  { label: "Contact", path: "/contact" },
+  { labelKey: "navbar.home", path: "/" },
+  { labelKey: "navbar.about", path: "/about" },
+  { labelKey: "navbar.entries", path: "/entries" },
+  { labelKey: "navbar.scholarship", path: "/scholarship" },
+  { labelKey: "navbar.patrakaar", path: "/patrakaar" },
+  { labelKey: "navbar.samman", path: "/samman" },
+  { labelKey: "navbar.contact", path: "/contact" },
 ];
 
 const Navbar = () => {
   const isMobile = useMediaQuery("(max-width:900px)");
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const { t } = useTranslation();
 
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
@@ -39,52 +42,21 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar
-        position="sticky"
-        sx={{
-          backgroundColor: "#F2EDE9",
-          boxShadow: 4,
-          px: { xs: 2, sm: 4 },
-        }}
-      >
+      <AppBar position="sticky" sx={{ backgroundColor: "#F2EDE9", boxShadow: 4, px: { xs: 2, sm: 4 } }}>
         <Toolbar sx={{ justifyContent: "space-between", py: 1 }}>
-          <Box
-            sx={{
-              width: { xs: 140, sm: 160, md: 180, lg: 260 },
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <img
-              src={Logo}
-              alt="Logo"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                cursor: "pointer",
-              }}
-            />
+          <Box sx={{ width: { xs: 140, sm: 160, md: 180, lg: 260 } }}>
+            <img src={Logo} alt="Logo" style={{ width: "100%", height: "auto", objectFit: "contain", cursor: "pointer" }} />
           </Box>
 
           {isMobile ? (
-            <IconButton
-              edge="end"
-              color="inherit"
-              onClick={toggleDrawer(true)}
-              sx={{ color: "black", backgroundColor: "white" }}
-            >
+            <IconButton edge="end" color="inherit" onClick={toggleDrawer(true)} sx={{ color: "black", backgroundColor: "white" }}>
               <MenuIcon />
             </IconButton>
           ) : (
-            <Stack
-              direction="row"
-              spacing={{ md: 1, lg: 3 }}
-              alignItems="center"
-            >
-              {navItems.map(({ label, path }) => (
+            <Stack direction="row" spacing={{ md: 1, lg: 3 }} alignItems="center">
+              {navItems.map(({ labelKey, path }) => (
                 <Button
-                  key={label}
+                  key={labelKey}
                   component={NavLink}
                   to={path}
                   sx={{
@@ -102,9 +74,10 @@ const Navbar = () => {
                     },
                   }}
                 >
-                  {label}
+                  {t(labelKey)}
                 </Button>
               ))}
+              {/* <LanguageSwitcher /> */}
             </Stack>
           )}
         </Toolbar>
@@ -119,22 +92,19 @@ const Navbar = () => {
             width: 200,
             backgroundColor: "#F2EDE9",
             color: "black",
-            top: "70px", 
+            top: "70px",
           },
         }}
       >
         <Box sx={{ display: "flex", justifyContent: "flex-end", p: 1 }}>
-          <IconButton
-            onClick={toggleDrawer(false)}
-            sx={{ color: "black" }}
-          >
+          <IconButton onClick={toggleDrawer(false)} sx={{ color: "black" }}>
             <CloseIcon />
           </IconButton>
         </Box>
 
         <List>
-          {navItems.map(({ label, path }) => (
-            <ListItem key={label} disablePadding>
+          {navItems.map(({ labelKey, path }) => (
+            <ListItem key={labelKey} disablePadding>
               <ListItemButton
                 component={NavLink}
                 to={path}
@@ -147,14 +117,13 @@ const Navbar = () => {
                   px: 2,
                 }}
               >
-                <ListItemText
-                  primary={
-                    <Typography sx={{ fontSize: "1rem" }}>{label}</Typography>
-                  }
-                />
+                <ListItemText primary={<Typography sx={{ fontSize: "1rem" }}>{t(labelKey)}</Typography>} />
               </ListItemButton>
             </ListItem>
           ))}
+          <Box sx={{ px: 2, pt: 1 }}>
+            <LanguageSwitcher />
+          </Box>
         </List>
       </Drawer>
     </>

@@ -1,0 +1,4 @@
+.slick-dots li.slick-active div {
+  background-color:black !important;
+  transform: scale(1.3);
+}

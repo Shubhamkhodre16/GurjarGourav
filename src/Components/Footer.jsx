@@ -13,8 +13,9 @@ import CallIcon from "@mui/icons-material/Call";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Logo from "../assets/image/gaurav navbar img.png";
-
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+  const { t } = useTranslation();
    const currentYear = new Date().getFullYear(); 
   return (
     <Box
@@ -48,7 +49,8 @@ const Footer = () => {
             />
           </Box>
           <Typography variant="h6" sx={{fontWeight:"bold" , mb: 2 }}>
-            Stay up to date
+            {/* Stay up to date */}
+            {t("footer.stay_updated")}
           </Typography>
           <Box
             sx={{
@@ -83,7 +85,8 @@ const Footer = () => {
                 color: "#F8FAFC",
                 
                 width: {
-                  xs: "30%",
+                  xs: "34%",
+                  lg:"34%"
                 },
                 height:{
                   xs:"30px",
@@ -92,19 +95,21 @@ const Footer = () => {
                 
               }}
             >
-              Submit
+              {/* Submit */}
+              {t("footer.submit")}
             </Button>
           </Box>
         </Grid>
 
         <Grid item xs={12} sm={6} md={3}>
           <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 }}>
-            Quick Links
+            {/* Quick Links */}
+            {t("footer.quick_links")}
           </Typography>
           {["Home", "About", "Contact"].map((label) => (
             <Link
               key={label}
-              href={`/${label.toLowerCase()}`}
+              href={`/${t(label).toLowerCase()}`}
               sx={{
                 color: "#F8FAFC",
                 display: "block",
@@ -113,7 +118,7 @@ const Footer = () => {
                 "&:hover": { textDecoration: "underline" },
               }}
             >
-              {label}
+              {t(label)}
             </Link>
           ))}
         </Grid>
