@@ -75,7 +75,8 @@ const Footer = () => {
                 },
                 height:{xs:"30px",
                   lg:"38px"
-                }
+                },
+                
               }}
             />
             <Button
