@@ -12,10 +12,10 @@ import EmailIcon from "@mui/icons-material/Email";
 import CallIcon from "@mui/icons-material/Call";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import Logo from "../assets/image/gaurav navbar img.png";
-import { useTranslation } from "react-i18next";
+// import Logo from "../assets/image/gaurav navbar img.png";
+// import { useTranslation } from "react-i18next";
 const Footer = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
    const currentYear = new Date().getFullYear(); 
   return (
     <Box
@@ -25,7 +25,7 @@ const Footer = () => {
         color: "#F8FAFC",
         py: 4,
         px: { xs: 2, sm: 6 },
-        mt: "auto",
+        // mt: "auto",
       }}
     >
       <Grid
@@ -36,7 +36,7 @@ const Footer = () => {
         sx={{px:2}}
       >
         <Grid item xs={12} sm={6} md={3}>
-          <Box sx={{ width: { xs: 120, sm: 160, md: 180 }, mb: 2 }}>
+          {/* <Box sx={{ width: { xs: 120, sm: 160, md: 180 }, mb: 2 }}>
             <img
               src={Logo}
               alt="Logo"
@@ -47,10 +47,11 @@ const Footer = () => {
                 cursor: "pointer",
               }}
             />
-          </Box>
+          </Box> */}
           <Typography variant="h6" sx={{fontWeight:"bold" , mb: 2 }}>
             {/* Stay up to date */}
-            {t("footer.stay_updated")}
+            {/* {t("footer.stay_updated")} */}
+            अप टू डेट रहें
           </Typography>
           <Box
             sx={{
@@ -62,8 +63,12 @@ const Footer = () => {
             <TextField
               variant="outlined"
               size="small"
-              placeholder="Enter your email"
-              
+              placeholder="अपना ईमेल दर्ज करें"
+              InputProps={{
+                sx: {
+                  height: {xs:"30px",  lg:"38px"}, 
+                },
+              }}
               sx={{
                 bgcolor: "#F8FAFC",
                 borderRadius: 1,
@@ -72,11 +77,7 @@ const Footer = () => {
                   sm:"50%",
                   md:"50%",  
                   lg:"100%"
-                },
-                height:{xs:"30px",
-                  lg:"38px"
-                },
-                
+                },  
               }}
             />
             <Button
@@ -91,13 +92,15 @@ const Footer = () => {
                 },
                 height:{
                   xs:"30px",
+                  
                   lg:"100%"
                 }
                 
               }}
             >
               {/* Submit */}
-              {t("footer.submit")}
+              {/* {t("footer.submit")} */}
+              जमा करें
             </Button>
           </Box>
         </Grid>
@@ -105,12 +108,13 @@ const Footer = () => {
         <Grid item xs={12} sm={6} md={3}>
           <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 }}>
             {/* Quick Links */}
-            {t("footer.quick_links")}
+            {/* {t("footer.quick_links")} */}
+            क्विक्स लिंक्स
           </Typography>
-          {["Home", "About", "Contact"].map((label) => (
+          {["होम", "हमारे बारे में", "संपर्क करें"].map((label) => (
             <Link
               key={label}
-              href={`/${t(label).toLowerCase()}`}
+              href={`/${(label)}`}
               sx={{
                 color: "#F8FAFC",
                 display: "block",
@@ -119,7 +123,7 @@ const Footer = () => {
                 "&:hover": { textDecoration: "underline" },
               }}
             >
-              {t(label)}
+              {label}
             </Link>
           ))}
         </Grid>

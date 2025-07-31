@@ -88,9 +88,10 @@ const ImageSlider = () => {
             key={index}
             sx={{
               width: "100%",
+              
               height: {
-                xs: "auto",
-                lg: "700px",
+                xs: "30vh",
+                lg: "618px",
               },
               objectFit: "cover",
             }}
