@@ -3,10 +3,10 @@ import Slider from "react-slick";
 import { Box, IconButton } from "@mui/material";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 
-import img1 from "../assets/image/slider 1.jpg";
-import img2 from "../assets/image/slider 2.jpg";
-import img3 from "../assets/image/slider 3.jpg";
-import img4 from "../assets/image/slider 4.jpg";
+import img1 from "../assets/image/SliderC.jpg";
+import img2 from "../assets/image/SliderD.jpg";
+import img3 from "../assets/image/SliderA.jpg";
+import img4 from "../assets/image/SilderB.jpg";
 import "../style/ImageSlider.css";
 
 const images = [img1, img2, img3, img4];

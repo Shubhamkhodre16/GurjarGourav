@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { TextField, Button, Box, Typography, Grid } from "@mui/material";
 import { Person, Email, Phone, Comment } from "@mui/icons-material";
-import topImage from "../assets/image/top-contact-image.jpg";
-
+// import topImage from "../assets/image/top-contact-image.jpg";
+import topImage from "../assets/image/Screenshot 2025-08-04 150606.png";
 const Contact = () => {
   const [formData, setFormData] = useState({
     firstname: "",
@@ -53,7 +53,7 @@ const Contact = () => {
             <Typography
               variant="h4"
               align="center"
-              color="#1F2937"
+              color="#a16627"
               fontWeight={800}
               fontSize={{ xs: "1.8rem", lg: "2.3rem" }}
               mb={2}
@@ -151,13 +151,13 @@ const Contact = () => {
                   type="submit"
                   variant="contained"
                   sx={{
-                    backgroundColor: "#1F2937",
+                    backgroundColor: "#a16627",
                     color: "#fff",
                     fontSize: {lg:"17px"},
                     fontWeight: "700",
                     marginTop: "20px",
                     width: 120,
-                    "&:hover": { backgroundColor: "#18273c" },
+                    "&:hover": { backgroundColor: "#b17331" },
                   }}
                 >
                   जमा करें
@@ -174,20 +174,21 @@ const Contact = () => {
               borderRadius: "10px",
               boxShadow: 6,
               padding: { xs: 3, sm: 4 },
-              height: "87%",
+              height: {xs:"300px"  ,lg:"87%"},
+              width: { xs:"240px", lg: "600px" },
             }}
           >
             <Typography
               variant="h4"
               align="center"
-              color="#1F2937"
+              color="#a16627"
               fontSize={{ xs: "1.8rem", lg: "2.3rem" }}
               fontWeight={800}
             >
               संपर्क में रहो
             </Typography>
 
-            <Box>
+            {/* <Box>
               <Typography
                 color="#131e36"
                 sx={{
@@ -267,7 +268,7 @@ const Contact = () => {
                   Amit Gurjar, Asst. Eng. MPEB, Khandwa: 9074217141
                 </a>
               </Typography>
-            </Box>
+            </Box> */}
           </Box>
         </Grid>
       </Grid>

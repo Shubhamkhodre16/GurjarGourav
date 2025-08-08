@@ -15,23 +15,20 @@ import {
 import { Link } from "react-router-dom";
 import ImageSlider from "./ImageSlider";
 
-import img1 from "../assets/image/home section 1.jpg";
-import img2 from "../assets/image/home section 2.jpg";
-import img3 from "../assets/image/home section 3.jpg";
-import img4 from "../assets/image/home section 4.jpg";
+import img1 from "../assets/image/Screenshot 2025-08-04 123116.png";
+import img2 from "../assets/image/Screenshot 2025-08-04 123204.png";
+import img3 from "../assets/image/Screenshot 2025-08-04 123326.png";
+import img4 from "../assets/image/Screenshot 2025-08-04 125229.png";
+
 // import cover from "../assets/image/pexels-edward-jenner-4252524.jpg";
 
 import section2 from "../assets/image/section2 bgimage.jpg";
-import sectionimg from "../assets/image/section2img.jpg";
+import sectionimg from "../assets/image/Screenshot 2025-08-04 150606.png";
 
-import section3 from "../assets/image/section3-1.jpg";
-import section32 from "../assets/image/section3-2.jpg";
+import section3 from "../assets/image/Screenshot 2025-08-04 151430.png";
+import section32 from "../assets/image/Screenshot 2025-08-04 151348.png";
 
-// // import cover from "../assets/image/pexels-834934396-20818864.jpg"
-// // import cover from "../assets/image/pexels-alteredsnaps-14866180.jpg"
-// // import cover from "../assets/image/pexels-edward-jenner-4252523.jpg"
-// import cover from "../assets/image/pexels-edward-jenner-4252524.jpg";
-// // import cover from "../assets/image/pexels-834934396-20818864.jpg"
+
 
 import SchoolIcon from "@mui/icons-material/School";
 import GroupsIcon from "@mui/icons-material/Groups";
@@ -44,6 +41,17 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CloseIcon from "@mui/icons-material/Close";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+
+import LS1 from "../assets/image/last second section (1).png";
+import LS2 from "../assets/image/last second section (2).png";
+import LS3 from "../assets/image/last second section (3).png";
+import LS4 from "../assets/image/last second section (4).png";
+import LS5 from "../assets/image/last second section (5).png";
+import LS6 from "../assets/image/last second section (6).png";
+import LS7 from "../assets/image/last second section (7).png";
+import LS8 from "../assets/image/last second section (8).png";
+import LS9 from "../assets/image/last second section (9).png";
+import LS10 from "../assets/image/last second section (10).png";
 
 const Home = () => {
   // const { t } = useTranslation();
@@ -85,7 +93,8 @@ const Home = () => {
     },
   ];
 
-  const imageData = [img1, img2, img3, img4, section3, section32];
+  const imageData = [LS1, LS2, LS3, LS4, LS5, LS6, LS7, LS8, LS9, LS10];
+
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -116,18 +125,137 @@ const Home = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   });
 
-  function scrollToTarget(id) {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  }
+  // function scrollToTarget(id) {
+  //   const element = document.getElementById(id);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: "smooth", block: "start" });
+  //   }
+  // }
 
   return (
     <>
-      <Box id="page-top-section">
+      <Box  id="page-top-section">
         <ImageSlider />
       </Box>
+
+      <FadeInSection>
+        <Box
+          sx={{
+            py: { xs: 5, lg: 15 },
+            backgroundImage: `url(${section2})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <Grid
+            container
+            spacing={4}
+            // direction={{ xs: "column-reverse", md: "row" }}
+            // justifyContent="center"
+            // alignItems="center"
+            sx={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              flexDirection: "row",
+            }}
+          >
+            <Grid item xs={12} md={6} sx={{ width: { xs: "100%", lg: "60%" } }}>
+              <Box sx={{ px: { xs: 2, sm: 4, md: 6 } }}>
+                <Typography
+                  variant="h3"
+                  sx={{
+                    fontWeight: 800,
+                    fontSize: { xs: "1.8rem", sm: "2.2rem", md: "3rem" },
+                    color: "#1F2937",
+                    textAlign: { xs: "center", md: "left" },
+                  }}
+                >
+                  हमारी कहानी
+                </Typography>
+
+                <Typography
+                  variant="h6"
+                  sx={{
+                    mt: 4,
+                    color: "#374151",
+                    fontSize: { xs: "0.95rem", sm: "1rem" },
+                    textAlign: { xs: "center", md: "left" },
+                    mx: { xs: "auto", md: 0 },
+                    width: { xs: "90%", sm: "85%", md: "80%", lg: "80%" },
+                    lineHeight:2.2
+                  }}
+                >
+                  माँ नर्मदा के तटवर्ती शिवालिक पर्वत श्रृंखलाओं में बसे
+                  सिंघावलोकन श्री भुआणा प्रांतीय गुर्जर समाज की स्थापना समाज को
+                  संगठित करने, शिक्षा, जागरूकता और नैतिक मूल्यों को बढ़ावा देने
+                  के उद्देश्य से हुई। यह समाज पशुपालन और कृषि से जुड़ा रहा है,
+                  और अपनी परंपराओं में गहराई से रचा-बसा है। 1946 में संगठन की
+                  औपचारिक शुरुआत हुई, जो 1947 में भुआणा प्रांतीय गुर्जर सभा के
+                  गठन से सुदृढ़ हुई। 1949 में इसका संविधान तैयार कर समाज को एक
+                  स्पष्ट दिशा दी गई। समय के साथ इसने कई अधिवेशनों और बैठकों के
+                  माध्यम से समाज सुधार, न्यायिक व्यवस्था और एकता का संदेश
+                  फैलाया। आज भी यह संगठन समाज के हित में सक्रिय भूमिका निभा रहा
+                  है और अपनी समृद्ध विरासत को संजोए हुए है।
+                </Typography>
+              </Box>
+            </Grid>
+
+            <Grid item xs={12} md={4}>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                {/* <Card
+                  sx={{
+                    borderRadius: 3,
+                    boxShadow: 3,
+                    height: { xs: 200, sm: 240, md: 260, lg: 360 },
+                    width: { xs: "70%", sm: "80%", md: "100%", lg: 320 },
+                    transition: "transform 0.4s ease, box-shadow 0.4s ease",
+                    "&:hover": {
+                      transform: "scale(0.95)",
+                      boxShadow: 6,
+                    },
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image={sectionimg}
+                    sx={{
+                      height: "100%",
+                      width: "100%",
+                      objectFit: "cover",
+                      borderRadius: 3,
+                    }}
+                  />
+                </Card> */}
+
+                <Box
+                  component="img"
+                  src={sectionimg}
+                  sx={{
+                    width: { xs: 200, sm: 240, md: 260, lg: "320px" },
+
+                    borderRadius: 3,
+                    boxShadow: 3,
+                    objectFit: "fill",
+                    height: { xs: 200, sm: 240, md: 260, lg: 360 },
+
+                    transition: "transform 0.4s ease, box-shadow 0.4s ease",
+                    "&:hover": {
+                      transform: "scale(0.95)",
+                      boxShadow: 6,
+                    },
+                  }}
+                />
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+      </FadeInSection>
 
       <FadeInSection>
         <Box
@@ -165,8 +293,6 @@ const Home = () => {
                   maxWidth: { md: "50%", lg: "80%" },
                 }}
               >
-                {/* Together We Are Strengthening Future of Society */}
-                {/* {t("home.hero_title")} */}
                 हम सब मिलकर समाज के भविष्य को मजबूत बना रहे हैं
               </Typography>
 
@@ -179,16 +305,12 @@ const Home = () => {
                   maxWidth: { md: "85%", lg: "70%" },
                 }}
               >
-                {/* We’ve been campaigning for an educated and self-dependent future
-              for many years – and we’re not going to stop. It’s time to teach
-              and guide the children of our society. */}
-                {/* {t("home.hero_desc")} */}
                 हम कई वर्षों से एक शिक्षित और आत्मनिर्भर भविष्य के लिए अभियान
                 चला रहे हैं – और हम रुकने वाले नहीं हैं। अब समय आ गया है कि हम
                 अपने समाज के बच्चों को शिक्षित और मार्गदर्शन करें।
               </Typography>
 
-              <Link to="/about" style={{ textDecoration: "none" }}>
+              <Link to="/AboutUs" style={{ textDecoration: "none" }}>
                 <Button
                   variant="contained"
                   sx={{
@@ -208,8 +330,6 @@ const Home = () => {
                     },
                   }}
                 >
-                  {/* Read About Us */}
-                  {/* {t("home.read_about_us")} */}
                   हमारे बारे में पढ़ें
                 </Button>
               </Link>
@@ -320,107 +440,7 @@ const Home = () => {
       <FadeInSection>
         <Box
           sx={{
-            py: { xs: 5, lg: 20 },
-            backgroundImage: `url(${section2})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <Grid
-            container
-            spacing={4}
-            // direction={{ xs: "column-reverse", md: "row" }}
-            // justifyContent="center"
-            // alignItems="center"
-            sx={{
-              display: "flex",
-              justifyContent: "space-evenly",
-              flexDirection: "row",
-            }}
-          >
-            <Grid item xs={12} md={6} sx={{ width: { xs: "100%", lg: "50%" } }}>
-              <Box sx={{ px: { xs: 2, sm: 4, md: 6 } }}>
-                <Typography
-                  variant="h3"
-                  sx={{
-                    fontWeight: 800,
-                    fontSize: { xs: "1.8rem", sm: "2.2rem", md: "3rem" },
-                    color: "#1F2937",
-                    textAlign: { xs: "center", md: "left" },
-                  }}
-                >
-                  {/* {t("home.our_story")} */}
-                  हमारी कहानी
-                </Typography>
-
-                <Typography
-                  variant="h6"
-                  sx={{
-                    mt: 4,
-                    color: "#374151",
-                    fontSize: { xs: "0.95rem", sm: "1rem" },
-                    textAlign: { xs: "center", md: "left" },
-                    mx: { xs: "auto", md: 0 },
-                    width: { xs: "90%", sm: "85%", md: "80%", lg: "70%" },
-                  }}
-                >
-                  {/* {t("home.our_story_text")} */}
-                  गुर्जर गौरव कल्याण परिषद की स्थापना 2016 में हमारे समाज के
-                  छात्रों की शिक्षा में सहयोग के लिए की गई थी। आज, हमारी टीम एक
-                  वैश्विक संगठन है जो हर छात्र को जीवन में सर्वोत्तम संभव शुरुआत
-                  और अच्छी शिक्षा प्रदान करने के लिए अथक प्रयास कर रही है।
-                  गुर्जर गौरव कल्याण परिषद हमारे समाज के वंचित छात्रों की सहायता
-                  और उनकी शिक्षा तक पहुँच को बेहतर बनाने के लिए अग्रणी कार्यक्रम
-                  चलाती है। उदाहरण के लिए, वे स्थानीय बाल विकास केंद्रों तक
-                  पहुँच प्रदान करके और अपने एवरी लास्ट चाइल्ड अभियान के माध्यम
-                  से, उन छात्रों तक पहुँचने का प्रयास करते हैं जो शिक्षा से
-                  वंचित हैं, खासकर लड़कियों तक।
-                </Typography>
-              </Box>
-            </Grid>
-
-            <Grid item xs={12} md={4}>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                <Card
-                  sx={{
-                    borderRadius: 3,
-                    boxShadow: 3,
-                    height: { xs: 200, sm: 240, md: 260, lg: 360 },
-                    width: { xs: "70%", sm: "80%", md: "100%", lg: 320 },
-                    transition: "transform 0.4s ease, box-shadow 0.4s ease",
-                    "&:hover": {
-                      transform: "scale(0.95)",
-                      boxShadow: 6,
-                    },
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    image={sectionimg}
-                    sx={{
-                      height: "100%",
-                      width: "100%",
-                      objectFit: "cover",
-                      borderRadius: 3,
-                    }}
-                  />
-                </Card>
-              </Box>
-            </Grid>
-          </Grid>
-        </Box>
-      </FadeInSection>
-
-      <FadeInSection>
-        <Box
-          sx={{
-            py: { xs: 5, lg: 20 },
+            py: { xs: 5, lg: 10 },
             backgroundImage: `url(${section2})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -441,23 +461,25 @@ const Home = () => {
               item
               xs={12}
               md={4}
-              sx={{ width: "auto", mb: { xs: "130px" } }}
+              sx={{ width: "auto", mb: { xs: "280px" } }}
             >
               <Box
                 sx={{
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  position:"relative"
                 }}
               >
                 <Box
                   component="img"
                   src={section3}
                   sx={{
-                    width: { xs: "65%", lg: "45%" },
+                    width: { xs: "200px", lg: "230px" },
                     maxWidth: 300,
                     borderRadius: 3,
                     boxShadow: 3,
+                    height: { xs: "200px", lg: "230px" },
 
                     transition: "transform 0.4s ease, box-shadow 0.4s ease",
                     "&:hover": {
@@ -471,22 +493,28 @@ const Home = () => {
                   component="img"
                   src={section32}
                   sx={{
-                    width: { xs: "65%", lg: "100%" },
-                    height: "100%",
+                    width: { xs: "200px", lg: "100%" },
+                    // height: "100%",
+                    height: { xs: "200px", lg: "230px" },
                     maxWidth: 260,
                     borderRadius: 3,
                     boxShadow: 3,
                     zIndex: 999,
-                    marginLeft: { lg: "250px" },
-                    marginTop: { xs: "30px", lg: "-80px" },
+                    // marginLeft: { lg: "250px" },
+                    position:"absolute",
+                    top:{xs:"250px" ,lg:"150px"},
+                    left:{lg:"120px"},
 
+                    // marginTop: { xs: "30px", lg: "-80px" },
+                    // marginBottom:"80px",
                     transition: "transform 0.4s ease, box-shadow 0.4s ease",
                     "&:hover": {
-                      transform: "scale(1.05)",
+                      transform: {xs:"scale(1.20)", lg:"scale(1.05)"},
                       boxShadow: 6,
                     },
                   }}
                 />
+
               </Box>
             </Grid>
 
@@ -500,7 +528,7 @@ const Home = () => {
                 marginLeft: { lg: "200px" },
               }}
             >
-              <Box sx={{ px: { xs: 2, sm: 4, md: 6 } }}>
+              <Box sx={{ px: { xs: 2, sm: 4, md: 6 }, width: { lg: "80%" } }}>
                 <Typography
                   variant="h3"
                   sx={{
@@ -510,7 +538,6 @@ const Home = () => {
                     textAlign: { xs: "center", md: "left" },
                   }}
                 >
-                  {/* {t("home.our_impact")} */}
                   हमारा प्रभाव
                 </Typography>
                 <Typography
@@ -523,7 +550,6 @@ const Home = () => {
                     textAlign: { xs: "center", md: "left" },
                   }}
                 >
-                  {/* {t("home.our_impact1")} */}
                   हमने प्रत्यक्ष अभ्यास के माध्यम से छात्रों के जीवन को बेहतर
                   बनाने पर काम किया है।
                 </Typography>
@@ -536,20 +562,29 @@ const Home = () => {
                     fontSize: { xs: "0.95rem", sm: "1rem" },
                     textAlign: { xs: "center", md: "left" },
                     mx: { xs: "auto", md: 0 },
-                    width: { xs: "90%", sm: "85%", md: "80%", lg: "70%" },
+                    width: { xs: "90%", sm: "85%", md: "80%", lg: "100%" },
+                    
                   }}
                 >
                   {/* {t("home.our_impact2")} */}
-                  विभिन्न पृष्ठभूमियों से आए छात्रों का हम पर और हमारी सभी
-                  गतिविधियों पर गहरा प्रभाव पड़ता है। वे समाज के उन हिस्सों को
-                  उजागर करते हैं जो टूटे हुए हैं, ताकि हम उन्हें आशा की किरण
-                  दिखाने और जीवन में आगे बढ़ने में हर संभव मदद कर सकें। मिशन
-                  एजुकेशन की शुरुआत 2016 में हमारे समाज के वंचित और स्कूल न जाने
-                  वाले छात्रों को शिक्षित करने के लिए एक गुणवत्तापूर्ण शिक्षा
-                  कार्यक्रम की बढ़ती ज़रूरत को देखते हुए की गई थी। स्वाभिमान,
-                  जिसका अंग्रेजी में अर्थ आत्म-सम्मान है, का उद्देश्य शिक्षा,
-                  स्वास्थ्य सेवा, आजीविका जागरूकता और जीवन कौशल में हस्तक्षेप के
-                  माध्यम से वंचित बालक-बालिकाओं का सशक्तिकरण करना है।
+                  समाज में शिक्षा का प्रचार - भुवाना प्रांतीय गुर्जर सभा का
+                  प्रारंभ से ही विश्वास है कि सामाजिक जागृति शिक्षा के बिना संभव
+                  नहीं होगी, अपनी निर्धनता और असहायता के कारण कोई बालक-बालिका इस
+                  अमृत तुल्य शिक्षा से वंचित न रह जाये, इस लिए संस्था के गठन से
+                  लेकर आज तक भुवाना प्रांतीय गुर्जर सभा ने कई उल्लेखनीय कार्य
+                  किये है। आधी शताब्दी पूर्व से ही अब तक प्रतिभाशाली छात्रों को
+                  तरह-तरह की छात्रवृत्तियां और महाविद्यालयीन शिक्षा हेतु ऋण दिया
+                  जा रहा है। (देखे दस्तावेज क्रमांक 1 आय व्यय लेखा 1947 से)
+                  विद्या मंदिरों के रूप में भुवाना प्रांत में चार स्थानों पर
+                  विशाल गुर्जर छात्रावास कार्यरत है। जिनमें प्राचीनतम छात्रावास
+                  टिमरनी, हरदा और नवनिर्मित खिड़किया एवं सिराली छात्रावास है, इन
+                  छात्रावासों का निर्माण और संचालन अन्य समाजों के लिए ईर्ष्या का
+                  विषय है। भुवाना प्रांतीया सभा का अभिनव प्रयोग निर्धन एवं योग्य
+                  छात्रों के अध्ययन के लिए आर्थिक सहायता हेतु एक शिक्षा कोष की
+                  स्थापना करना है। इससे कि चयनित निर्धन छात्रों के छात्ररास का
+                  पूरा शैक्षणिक, आवासीय एवं भोजन खर्च का वहन किया जा सके। माननीय
+                  डा. रेवाशंकर जी दोगने के निरन्तर प्रयासों से आज इस शिक्षा कोष
+                  में विपुल राशि का संचय हो रहा है।
                 </Typography>
               </Box>
             </Grid>
@@ -688,16 +723,16 @@ const Home = () => {
           >
             हमारा ध्यान सबसे कमज़ोर छात्रों को गरीबी से उबरने और जीवन की पूर्णता
             का अनुभव करने में मदद करने पर है। हम सभी पृष्ठभूमि के बच्चों की मदद
-            करते हैं, यहाँ तक कि सबसे खतरनाक जगहों पर भी, हमारे गुर्जर गौरव
-            कल्याण परिषद से प्रेरित होकर। हम मिलकर आज बच्चों को शिक्षित कर सकते
-            हैं और उन्हें कल के लिए सशक्त बना सकते हैं।
+            करते हैं, यहाँ तक कि सबसे खतरनाक जगहों पर भी, हमारे भुवाना गुर्जर से
+            प्रेरित होकर। हम मिलकर आज बच्चों को शिक्षित कर सकते हैं और उन्हें कल
+            के लिए सशक्त बना सकते हैं।
           </Typography>
 
           <Grid
             container
-            spacing={3}
+            spacing={{ xs: 2, lg: 3 }}
             justifyContent="center"
-            sx={{ maxWidth: "1000px", margin: "0 auto" }}
+            sx={{ width: "auto", margin: "0 auto" }}
           >
             {imageData.map((src, index) => (
               <Grid
@@ -712,8 +747,18 @@ const Home = () => {
                   position="relative"
                   sx={{
                     cursor: "pointer",
-                    width: { xs: "200px", lg: "280px" },
-                    height: { xs: "200px", lg: "280px" },
+                    width: {
+                      xs: "135px",
+                      sm: "200px",
+                      md: "250px",
+                      lg: "280px",
+                    },
+                    height: {
+                      xs: "135px",
+                      sm: "200px",
+                      md: "250px",
+                      lg: "280px",
+                    },
                     borderRadius: "10px",
                     overflow: "hidden",
                     "&:hover .hover-content": {
@@ -728,7 +773,7 @@ const Home = () => {
                     sx={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      objectFit: "fill",
                       borderRadius: "10px",
                       display: "block",
                     }}
@@ -750,11 +795,11 @@ const Home = () => {
                       flexDirection: "column",
                       justifyContent: "center",
                       alignItems: "center",
-                      px: 2,
+                      // px: 2,
                       textAlign: "center",
                     }}
                   >
-                    <Typography
+                    {/* <Typography
                       variant="h6"
                       fontWeight="bold"
                       sx={{
@@ -769,8 +814,8 @@ const Home = () => {
                       }}
                     >
                       पुरस्कार समारोह
-                    </Typography>
-                    <Typography
+                    </Typography> */}
+                    {/* <Typography
                       variant="body2"
                       sx={{
                         fontSize: {
@@ -784,7 +829,7 @@ const Home = () => {
                       जो छात्र अपने छात्रों को उनकी कड़ी मेहनत और उपलब्धि के लिए
                       पुरस्कृत करने में गर्व महसूस करते हैं, उन्हें हमेशा ध्यान
                       में रखा जाना चाहिए।
-                    </Typography>
+                    </Typography> */}
                     <Box display="flex" gap={4} alignItems={"center"}>
                       <Button
                         variant="contained"
@@ -800,24 +845,7 @@ const Home = () => {
                         }}
                         onClick={() => handleOpen(index)}
                       >
-                        View
-                      </Button>
-
-                      <Button
-                        variant="contained"
-                        onClick={() => scrollToTarget("page-top-section")}
-                        sx={{
-                          bgcolor: "#ffffffcc",
-                          color: "#000",
-                          fontWeight: 600,
-                          textTransform: "none",
-
-                          fontSize: { xs: "0.75rem", sm: "0.875rem" },
-                          padding: { xs: "6px 12px", sm: "8px 16px" },
-                          mr: { xs: 4, sm: 2, md: 3, lg: 4 },
-                        }}
-                      >
-                        +
+                        देखे
                       </Button>
                     </Box>
                   </Box>
@@ -845,9 +873,11 @@ const Home = () => {
             >
               <IconButton
                 onClick={handleClose}
-                sx={{ position: "absolute", top: 10, right: 10, zIndex: 10 }}
+                sx={{ position: "absolute", top: 10, right: 10, zIndex: 10 ,bgcolor: "#000000aa", color:"white" }}
               >
-                <CloseIcon />
+                <CloseIcon sx={{
+                    fontSize: { xs: "0.8rem", lg: "1.5rem" },
+                  }} />
               </IconButton>
               <img
                 src={imageData[activeIndex]}
@@ -865,23 +895,28 @@ const Home = () => {
                 sx={{
                   position: "absolute",
                   top: "50%",
-                  left: 10,
+                  left: {xs:0 , lg:10},
                   transform: "translateY(-50%)",
                   bgcolor: "#000000aa",
                   color: "#fff",
+
                   "&:hover": {
                     backgroundColor: "#000000aa",
                   },
                 }}
               >
-                <ArrowBackIosNewIcon />
+                <ArrowBackIosNewIcon
+                  sx={{
+                    fontSize: { xs: "0.8rem", lg: "1.5rem" },     
+                  }}
+                />
               </IconButton>
               <IconButton
                 onClick={handleNext}
                 sx={{
                   position: "absolute",
                   top: "50%",
-                  right: 10,
+                  right: {xs:0 , lg:10},
                   transform: "translateY(-50%)",
                   bgcolor: "#000000aa",
                   color: "#fff",
@@ -890,7 +925,9 @@ const Home = () => {
                   },
                 }}
               >
-                <ArrowForwardIosIcon />
+                <ArrowForwardIosIcon  sx={{
+                    fontSize: { xs: "0.8rem", lg: "1.5rem" }, 
+                  }} />
               </IconButton>
             </Box>
           </Modal>
@@ -900,7 +937,7 @@ const Home = () => {
       <FadeInSection>
         <Box
           sx={{
-            py: { xs: 6,  md: 4 },
+            py: { xs: 6, md: 4 },
             px: { xs: 2, sm: 4 },
             textAlign: "center",
             backgroundImage: `url(${section2})`,
@@ -914,22 +951,22 @@ const Home = () => {
               bgcolor: "#a16627",
               p: { xs: 3, sm: 4, md: 6 },
               borderRadius: 2,
-              width: { xs: "auto", sm: "90%", md: "70%" },
-              height: { xs: "auto", md: "500px" },
+              width: { xs: "auto", sm: "50%", md: "60%", lg: "55%" },
+              height: { xs: "auto", md: "400px" },
               margin: "0 auto",
             }}
           >
             <Typography
               variant="h1"
               fontWeight="bold"
-              mb={{ xs: 4, sm: 6 }}
-              mt={{ xs: 2, md: 8, lg: 10 }}
+              mb={{ xs: 2, sm: 6 }}
+              mt={{ xs: 2, lg: 4 }}
               sx={{
                 fontSize: {
                   xs: "1.5rem",
                   sm: "2.2rem",
                   md: "3.5rem",
-                  lg: "4.5rem",
+                  lg: "3.5rem",
                 },
                 color: "#fff",
                 width: { xs: "100%", sm: "90%", md: "70%", lg: "65%" },
@@ -940,7 +977,7 @@ const Home = () => {
                 },
               }}
             >
-              गुर्जर गौरव कल्याण परिषद के हमारे मिशन से जुड़ें
+              भुवाना प्रांतीय गुर्जर सभा के मिशन से जुड़ें
             </Typography>
 
             <Button
@@ -949,13 +986,12 @@ const Home = () => {
                 bgcolor: "#ffffffcc",
                 color: "#000",
                 fontWeight: 800,
-                mt: { xs: 2, sm: 4 },
+                mt: { xs: 1, sm: 4 },
                 borderRadius: "25px",
                 fontSize: {
                   xs: "0.8rem",
                   sm: "1rem",
                   md: "1.5rem",
-                  lg: "1.875rem",
                 },
                 px: { xs: 2, sm: 4 },
                 py: { xs: 1, sm: 1.5 },
@@ -968,7 +1004,7 @@ const Home = () => {
               }}
             >
               <Link
-                to="/संपर्क करें"
+                to="/ContactUs"
                 style={{
                   textDecoration: "none",
                   color: "black",
